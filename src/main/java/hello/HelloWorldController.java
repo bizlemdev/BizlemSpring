@@ -12,15 +12,18 @@ public class HelloWorldController {
 
     @RequestMapping(method = RequestMethod.POST)
     public @ResponseBody WebhookResponse webhook(@RequestBody String obj){
-        String text="";
+       String text = null;
 try{
-        
-        JSONObject objS = new JSONObject(obj);
+	    	JSONObject objS = new JSONObject(obj);
 //          System.out.println(objS.get("id"));
           JSONObject result = objS.getJSONObject("result");
-          text = result.getString("resolvedQuery");
-        System.out.println(text);
-}catch(Exception e){}
-        return new WebhookResponse(text, text);
-    }
+           text = result.getString("resolvedQuery");
+            
+          
+}catch(Exception e){
+	text = "last ctach"+e.getMessage();
+}
+
+	        return new WebhookResponse( text, text);
+	    }
 }
