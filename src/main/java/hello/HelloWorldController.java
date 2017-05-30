@@ -18,7 +18,7 @@ try{
         JSONObject objS = new JSONObject(obj);
 //          System.out.println(objS.get("id"));
           JSONObject result = objS.getJSONObject("result");
-          String text = result.getString("resolvedQuery");
+          text = result.getString("resolvedQuery");
         System.out.println(text);
 }catch(Exception e){}
         return new WebhookResponse(text, text);
