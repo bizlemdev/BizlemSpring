@@ -13,8 +13,13 @@ public class HelloWorldController {
     @RequestMapping(method = RequestMethod.POST)
     public @ResponseBody WebhookResponse webhook(@RequestBody String obj){
 
-        System.out.println(obj);
+        
+        JSONObject objS = new JSONObject(obj);
+//          System.out.println(objS.get("id"));
+          JSONObject result = objS.getJSONObject("result");
+          String text = result.getString("resolvedQuery");
+        System.out.println(text);
 
-        return new WebhookResponse("Hello! " + obj, "Text " + obj);
+        return new WebhookResponse(text, text);
     }
 }
