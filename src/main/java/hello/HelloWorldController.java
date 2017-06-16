@@ -14,7 +14,7 @@ public class HelloWorldController {
     @RequestMapping(method = RequestMethod.POST)
     public @ResponseBody String webhook(@RequestBody String obj){
        String text = null;
-       String source = null;
+    //   String source = null;
        String respostring=null;
        
 try{
@@ -22,8 +22,8 @@ try{
 //          System.out.println(objS.get("id"));
           JSONObject result = objS.getJSONObject("result");
 	        text = result.getString("resolvedQuery");
-	  JSONObject originalRequest = objS.getJSONObject("originalRequest");
-	        source = result.getString("source");
+	//  JSONObject originalRequest = objS.getJSONObject("originalRequest");
+	 //       source = result.getString("source");
 	        text="I love India";
            
             
