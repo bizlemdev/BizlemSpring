@@ -16,7 +16,7 @@ public class HelloWorldController {
        String text = null;
     //   String source = null;
        String respostring=null;
-       
+       String text1=null;
 try{
 	    	JSONObject objS = new JSONObject(obj);
 //          System.out.println(objS.get("id"));
@@ -24,7 +24,7 @@ try{
 	        text = result.getString("resolvedQuery");
 	//  JSONObject originalRequest = objS.getJSONObject("originalRequest");
 	 //       source = result.getString("source");
-	        String text1="I love India";
+	        text1="I love India";
            
             
 	    
