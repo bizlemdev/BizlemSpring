@@ -14,13 +14,17 @@ public class HelloWorldController {
     @RequestMapping(method = RequestMethod.POST)
     public @ResponseBody String webhook(@RequestBody String obj){
        String text = null;
+       String source = null;
        String respostring=null;
        
 try{
 	    	JSONObject objS = new JSONObject(obj);
 //          System.out.println(objS.get("id"));
           JSONObject result = objS.getJSONObject("result");
-           text = result.getString("resolvedQuery");
+	        text = result.getString("resolvedQuery");
+	  JSONObject originalRequest = objS.getJSONObject("originalRequest");
+	        source = result.getString("source");
+           
             
 	    
           
@@ -28,6 +32,7 @@ try{
 	text = "last ctach"+e.getMessage();
 }
 
-	       return  "{speech: "+text+",displayText: "+text+", source: biz-webhook-sample}";
+	       //return  "{speech: "+text+",displayText: "+text+", source: biz-webhook-sample}";
+	       return  "{speech: "+text+",displayText: "+text+" source"+source+", source: biz-webhook-sample}";
 	    }
 }
