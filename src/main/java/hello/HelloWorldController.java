@@ -24,7 +24,7 @@ try{
 	        text = result.getString("resolvedQuery");
 	//  JSONObject originalRequest = objS.getJSONObject("originalRequest");
 	 //       source = result.getString("source");
-	        text="I love India";
+	       // text="I love India";
            
             
 	    
