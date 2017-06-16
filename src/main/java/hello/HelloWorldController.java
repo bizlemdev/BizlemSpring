@@ -15,6 +15,7 @@ public class HelloWorldController {
     public @ResponseBody String webhook(@RequestBody String obj){
        String text = null;
        String source = null;
+       String name=null;
        String respostring=null;
        String text1=null;
 try{
@@ -24,6 +25,10 @@ try{
 	        text = result.getString("resolvedQuery");
 	  JSONObject originalRequest = objS.getJSONObject("originalRequest");
 	        source = originalRequest.getString("source");
+	JSONObject data = originalRequest.getJSONObject("data");
+	JSONObject user = data.getJSONObject("user");
+	        name=user.getString("name");
+
 	        text1="I love India";
            
             
@@ -33,7 +38,7 @@ try{
 	text = "last ctach"+e.getMessage();
 }
 
-	       return  "{speech: "+source+",displayText: "+source+", source: biz-webhook-sample}";
+	       return  "{speech: "+name+",displayText: "+name+", source: biz-webhook-sample}";
 	       //return  "{speech: "+text+" source "+source+",displayText: "+text+", source: biz-webhook-sample}";
 	    }
 }
