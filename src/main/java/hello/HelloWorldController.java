@@ -23,7 +23,7 @@ try{
           JSONObject result = objS.getJSONObject("result");
 	        text = result.getString("resolvedQuery");
 	  JSONObject originalRequest = objS.getJSONObject("originalRequest");
-	        source = result.getString("source");
+	        source = originalRequest.getString("source");
 	        text1="I love India";
            
             
