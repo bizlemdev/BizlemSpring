@@ -24,7 +24,7 @@ try{
 	        text = result.getString("resolvedQuery");
 	//  JSONObject originalRequest = objS.getJSONObject("originalRequest");
 	 //       source = result.getString("source");
-	        text="I love India";
+	        String text1="I love India";
            
             
 	    
@@ -33,7 +33,7 @@ try{
 	text = "last ctach"+e.getMessage();
 }
 
-	       return  "{speech: "+text+",displayText: "+text+", source: biz-webhook-sample}";
+	       return  "{speech: "+text1+",displayText: "+text+", source: biz-webhook-sample}";
 	       //return  "{speech: "+text+" source "+source+",displayText: "+text+", source: biz-webhook-sample}";
 	    }
 }
