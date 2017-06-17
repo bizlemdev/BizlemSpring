@@ -31,8 +31,8 @@ try{
 	        name=user.getString("name");
 
 	        text1="I love India";
-	        int rescode=authorize();
-	        rescode_str=String.valueOf(rescode);//Now it will return "10"  
+	      //  int rescode=authorize();
+	    //    rescode_str=String.valueOf(rescode);//Now it will return "10"  
            
             
 	    
