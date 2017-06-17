@@ -41,7 +41,7 @@ try{
 	text = "last ctach"+e.getMessage();
 }
 
-	       return  "{speech: "+name+",displayText: "+name+", source: biz-webhook-sample}";
+	       return  "{speech: "+text+",displayText: "+text+", source: biz-webhook-sample}";
 	       //return  "{speech: "+text+" source "+source+",displayText: "+text+", source: biz-webhook-sample}";
 	    }
 	
