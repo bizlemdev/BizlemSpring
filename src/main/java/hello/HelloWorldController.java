@@ -61,15 +61,15 @@ try{
 		 try {
             int BUFFER_SIZE = 4096;
             URL url = new URL("http://34.196.246.23:8101/MessagingToolController?webhookrespo=hi");
-//             HttpURLConnection http = (HttpURLConnection) url.openConnection();
+             HttpURLConnection http = (HttpURLConnection) url.openConnection();
 
-//             http.setRequestMethod("POST");
+             http.setRequestMethod("POST");
 //             http.setRequestProperty("Content-Type", "ext/html");
 //             http.setUseCaches(false);
         
 //             http.setDoOutput(true);
    
-//             statusCode = http.getResponseCode();
+             statusCode = http.getResponseCode();
 //             System.out.println("code=======" + statusCode);
 //             String newLine = System.getProperty("line.separator");
 //             BufferedReader reader = new BufferedReader(new InputStreamReader(http.getInputStream()));
