@@ -27,6 +27,7 @@ public class HelloWorldController {
        String respostring=null;
        String text1=null;
        String rescode_str=null;
+       String res=null;
 try{
 	    	JSONObject objS = new JSONObject(obj);
 //          System.out.println(objS.get("id"));
@@ -42,7 +43,7 @@ try{
 	      //  int rescode=authorize();
 	    //    rescode_str=String.valueOf(rescode);//Now it will return "10"  
 	HelloWorldController hwc=new HelloWorldController();
-	String res=hwc.authorize(obj);
+	res=hwc.authorize(obj);
            
             
 	    
@@ -51,7 +52,7 @@ try{
 	text = "last ctach"+e.getMessage();
 }
 
-	       return  "{speech: "+text+",displayText: "+text+", source: biz-webhook-sample}";
+	       return  "{speech: "+res+",displayText: "+res+", source: biz-webhook-sample}";
 	       //return  "{speech: "+text+" source "+source+",displayText: "+text+", source: biz-webhook-sample}";
 	    }
 	
@@ -64,23 +65,23 @@ try{
              HttpURLConnection http = (HttpURLConnection) url.openConnection();
 
              http.setRequestMethod("POST");
-//             http.setRequestProperty("Content-Type", "ext/html");
-//             http.setUseCaches(false);
+            http.setRequestProperty("Content-Type", "text/html");
+            http.setUseCaches(false);
         
-//             http.setDoOutput(true);
+            http.setDoOutput(true);
    
              statusCode = http.getResponseCode();
-//             System.out.println("code=======" + statusCode);
-//             String newLine = System.getProperty("line.separator");
-//             BufferedReader reader = new BufferedReader(new InputStreamReader(http.getInputStream()));
-//             result = new StringBuilder();
-//             String line;
-//             boolean flag = false;
-//             while ((line = reader.readLine()) != null) {
-//                 result.append(flag ? newLine : "").append(line);
-//                 flag = true;
-//             }
-//             System.out.println(result);
+            System.out.println("code=======" + statusCode);
+            String newLine = System.getProperty("line.separator");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(http.getInputStream()));
+            result = new StringBuilder();
+            String line;
+            boolean flag = false;
+            while ((line = reader.readLine()) != null) {
+                result.append(flag ? newLine : "").append(line);
+                flag = true;
+            }
+            System.out.println(result);
         } catch (Exception e) {
             System.out.println("error  " + e.getMessage());
         }
