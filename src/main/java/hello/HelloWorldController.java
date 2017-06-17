@@ -34,7 +34,7 @@ try{
 	      //  int rescode=authorize();
 	    //    rescode_str=String.valueOf(rescode);//Now it will return "10"  
 	HelloWorldController hwc=new HelloWorldController();
-	String res=hwc.authorize(obj);
+	//String res=hwc.authorize(obj);
            
             
 	    
