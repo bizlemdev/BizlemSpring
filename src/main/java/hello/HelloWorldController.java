@@ -51,7 +51,7 @@ try{
                  int statusCode = 0;
 		 try {
             int BUFFER_SIZE = 4096;
-            bundle = ResourceBundle.getBundle("config");
+          //  bundle = ResourceBundle.getBundle("config");
           //  URL url = new URL(bundle.getString("rbac_ip"));
               URL url = new URL("http://34.196.246.23:9500?source=skype&sourceId=Akhilesh Yadav");
  
