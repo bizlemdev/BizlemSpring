@@ -69,6 +69,18 @@ try{
             http.setUseCaches(false);
         
             http.setDoOutput(true);
+            JSONObject json = new JSONObject();
+            json.put("obj",  obj);
+//             obj.put("projectId", 1);
+//             obj.put("workflowName", skillFlowContext.getWorkflow());
+            
+            DataOutputStream wr = new DataOutputStream(http.getOutputStream());
+ 
+            wr.writeBytes(json.toString());
+ 
+            wr.flush();
+ 
+            wr.close();
    
              statusCode = http.getResponseCode();
             System.out.println("code=======" + statusCode);
