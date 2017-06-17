@@ -45,46 +45,5 @@ try{
 	       //return  "{speech: "+text+" source "+source+",displayText: "+text+", source: biz-webhook-sample}";
 	    }
 	
-	public static int authorize(){
- 
-		 StringBuilder result=null;
-                 int statusCode = 0;
-		 try {
-            int BUFFER_SIZE = 4096;
-          //  bundle = ResourceBundle.getBundle("config");
-          //  URL url = new URL(bundle.getString("rbac_ip"));
-              URL url = new URL("http://34.196.246.23:9500?source=skype&sourceId=Akhilesh Yadav");
- 
-            HttpURLConnection http = (HttpURLConnection) url.openConnection();
- 
-            http.setRequestMethod("GET");
-            http.setRequestProperty("Content-Type", "application/json");
-         //   http.setRequestProperty("Authorization", "Bearer "+skillFlowContext.getAccessToken());
-         //    http.setUseCaches(false);
- 
-       //     http.setDoOutput(true);
- 
-//             JSONObject obj = new JSONObject();
-//             obj.put("userName",  skillFlowContext.getSessionId());
-//             obj.put("projectId", 1);
-//             obj.put("workflowName", skillFlowContext.getWorkflow());
-            
-//             DataOutputStream wr = new DataOutputStream(http.getOutputStream());
- 
-//             wr.writeBytes(obj.toString());
- 
-//             wr.flush();
- 
-//             wr.close();
-            
-         
-             statusCode = http.getResponseCode();
-            System.out.println("code=======" + statusCode);
-         
-        } catch (Exception e) {
-            System.out.println("error  " + e.getMessage());
-        }
-               //  return result;
-                 return statusCode;
-	}
+	
 }
